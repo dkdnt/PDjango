@@ -1,0 +1,300 @@
+    execute_from_command_line(sys.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line
+443, in execute_from_command_line
+    utility.execute()
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line
+382, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\base.py", line 196,
+ in run_from_argv
+    self.execute(*args, **options.__dict__)
+  File "C:\Python27\lib\site-packages\django\core\management\base.py", line 231,
+ in execute
+    self.validate()
+  File "C:\Python27\lib\site-packages\django\core\management\base.py", line 266,
+ in validate
+    num_errors = get_validation_errors(s, app)
+  File "C:\Python27\lib\site-packages\django\core\management\validation.py", lin
+e 103, in get_validation_errors
+    connection.validation.validate_field(e, opts, f)
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\validation.py", l
+ine 14, in validate_field
+    db_version = self.connection.get_server_version()
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 41
+5, in get_server_version
+    self.cursor().close()
+  File "C:\Python27\lib\site-packages\django\db\backends\__init__.py", line 306,
+ in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "C:\Python27\lib\site-packages\django\db\backends\mysql\base.py", line 38
+7, in _cursor
+    self.connection = Database.connect(**kwargs)
+  File "C:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 187, in __in
+it__
+    super(Connection, self).__init__(*args, **kwargs2)
+_mysql_exceptions.OperationalError: (1049, "Unknown database 'receta.'")
+
+C:\PDjango\recetario>python manage.py syncdb
+Creating tables ...
+Creating table auth_permission
+Creating table auth_group_permissions
+Creating table auth_group
+Creating table auth_user_user_permissions
+Creating table auth_user_groups
+Creating table auth_user
+Creating table django_content_type
+Creating table django_session
+Creating table django_site
+Creating table django_admin_log
+
+You just installed Django's auth system, which means you don't have any superuse
+rs defined.
+Would you like to create one now? (yes/no): yes
+Username (leave blank to use 'martha'): edgar
+E-mail address: edgarcisneros88@gmail.com
+Password:
+Password (again):
+Superuser created successfully.
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+
+C:\PDjango\recetario>dir
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 4CE5-6CB5
+
+ Directorio de C:\PDjango\recetario
+
+14/10/2012  09:21 p.m.    <DIR>          .
+14/10/2012  09:21 p.m.    <DIR>          ..
+08/10/2012  09:57 p.m.               262 manage.py
+14/10/2012  08:20 p.m.    <DIR>          principal
+14/10/2012  09:32 p.m.    <DIR>          recetario
+14/10/2012  09:21 p.m.            35,840 recetario.db
+14/10/2012  08:50 p.m.             5,258 settings.py
+14/10/2012  08:50 p.m.               591 urls.py
+08/10/2012  09:57 p.m.                 0 __init__.py
+               5 archivos         41,951 bytes
+               4 dirs  177,212,174,336 bytes libres
+
+C:\PDjango\recetario>python manage.py runserver
+Validating models...
+
+0 errors found
+Django version 1.4.1, using settings 'recetario.settings'
+Development server is running at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[14/Oct/2012 21:38:38] "GET / HTTP/1.1" 404 2008
+[14/Oct/2012 21:38:47] "GET /admin HTTP/1.1" 301 0
+[14/Oct/2012 21:38:47] "GET /admin/ HTTP/1.1" 200 1933
+[14/Oct/2012 21:38:56] "POST /admin/ HTTP/1.1" 302 0
+[14/Oct/2012 21:38:56] "GET /admin/ HTTP/1.1" 200 3351
+[14/Oct/2012 21:38:58] "GET /admin/auth/group/add/ HTTP/1.1" 200 5760
+[14/Oct/2012 21:38:59] "GET /admin/jsi18n/ HTTP/1.1" 200 5410
+[14/Oct/2012 21:39:21] "POST /admin/auth/group/add/ HTTP/1.1" 302 0
+[14/Oct/2012 21:39:21] "GET /admin/auth/group/ HTTP/1.1" 200 4647
+[14/Oct/2012 21:39:21] "GET /admin/jsi18n/ HTTP/1.1" 200 5410
+[14/Oct/2012 21:42:34] "GET /admin/logout/ HTTP/1.1" 200 1171
+[14/Oct/2012 21:42:38] "GET /admin/ HTTP/1.1" 200 1933
+
+C:\PDjango\recetario>
+C:\PDjango\recetario>
+C:\PDjango\recetario>cd ..
+
+C:\PDjango>dir
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 4CE5-6CB5
+
+ Directorio de C:\PDjango
+
+08/10/2012  09:57 p.m.    <DIR>          .
+08/10/2012  09:57 p.m.    <DIR>          ..
+14/10/2012  09:21 p.m.    <DIR>          recetario
+               0 archivos              0 bytes
+               3 dirs  177,075,273,728 bytes libres
+
+C:\PDjango>
+C:\PDjango>django-admin.py startproject mysite
+
+C:\PDjango>dir
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 4CE5-6CB5
+
+ Directorio de C:\PDjango
+
+14/10/2012  09:58 p.m.    <DIR>          .
+14/10/2012  09:58 p.m.    <DIR>          ..
+14/10/2012  09:58 p.m.    <DIR>          mysite
+14/10/2012  09:21 p.m.    <DIR>          recetario
+               0 archivos              0 bytes
+               4 dirs  177,074,745,344 bytes libres
+
+C:\PDjango>cd mysite
+
+C:\PDjango\mysite>dir
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 4CE5-6CB5
+
+ Directorio de C:\PDjango\mysite
+
+14/10/2012  09:58 p.m.    <DIR>          .
+14/10/2012  09:58 p.m.    <DIR>          ..
+14/10/2012  09:58 p.m.               259 manage.py
+14/10/2012  09:58 p.m.    <DIR>          mysite
+14/10/2012  09:58 p.m.             5,126 settings.py
+14/10/2012  09:58 p.m.               582 urls.py
+14/10/2012  09:58 p.m.                 0 __init__.py
+               4 archivos          5,967 bytes
+               3 dirs  177,074,745,344 bytes libres
+
+C:\PDjango\mysite>python manage.py runserver
+Validating models...
+
+0 errors found
+Django version 1.4.1, using settings 'mysite.settings'
+Development server is running at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[14/Oct/2012 22:00:56] "GET / HTTP/1.1" 200 1957
+
+C:\PDjango\mysite>
+C:\PDjango\mysite>python manage.py syncdb
+Creating tables ...
+Creating table auth_permission
+Creating table auth_group_permissions
+Creating table auth_group
+Creating table auth_user_user_permissions
+Creating table auth_user_groups
+Creating table auth_user
+Creating table django_content_type
+Creating table django_session
+Creating table django_site
+
+You just installed Django's auth system, which means you don't have any superuse
+rs defined.
+Would you like to create one now? (yes/no): yes
+Username (leave blank to use 'martha'): edgar
+E-mail address: edgarcisneros88@gmail.com
+Password:
+Password (again):
+Superuser created successfully.
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+
+C:\PDjango\mysite>dir
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 4CE5-6CB5
+
+ Directorio de C:\PDjango\mysite
+
+14/10/2012  09:58 p.m.    <DIR>          .
+14/10/2012  09:58 p.m.    <DIR>          ..
+14/10/2012  09:58 p.m.               259 manage.py
+14/10/2012  10:06 p.m.    <DIR>          mysite
+14/10/2012  09:58 p.m.             5,126 settings.py
+14/10/2012  09:58 p.m.               582 urls.py
+14/10/2012  09:58 p.m.                 0 __init__.py
+               4 archivos          5,967 bytes
+               3 dirs  177,074,171,904 bytes libres
+
+C:\PDjango\mysite>
+C:\PDjango\mysite>python manage.py startapp polls
+
+C:\PDjango\mysite>dir
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 4CE5-6CB5
+
+ Directorio de C:\PDjango\mysite
+
+14/10/2012  10:08 p.m.    <DIR>          .
+14/10/2012  10:08 p.m.    <DIR>          ..
+14/10/2012  09:58 p.m.               259 manage.py
+14/10/2012  10:06 p.m.    <DIR>          mysite
+14/10/2012  10:08 p.m.    <DIR>          polls
+14/10/2012  09:58 p.m.             5,126 settings.py
+14/10/2012  09:58 p.m.               582 urls.py
+14/10/2012  09:58 p.m.                 0 __init__.py
+               4 archivos          5,967 bytes
+               4 dirs  177,074,761,728 bytes libres
+
+C:\PDjango\mysite>python manage.py startapp polls
+Error: 'polls' conflicts with the name of an existing Python module and cannot b
+e used as an app name. Please try another name.
+
+C:\PDjango\mysite>python manage.py sql polls
+Error: No module named polls
+
+C:\PDjango\mysite>cd mysite
+
+C:\PDjango\mysite\mysite>python manage.py startapp polls
+python: can't open file 'manage.py': [Errno 2] No such file or directory
+
+C:\PDjango\mysite\mysite>dir
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 4CE5-6CB5
+
+ Directorio de C:\PDjango\mysite\mysite
+
+14/10/2012  10:11 p.m.    <DIR>          .
+14/10/2012  10:11 p.m.    <DIR>          ..
+14/10/2012  10:11 p.m.             5,416 settings.py
+14/10/2012  10:11 p.m.             2,895 settings.pyc
+14/10/2012  09:58 p.m.               573 urls.py
+14/10/2012  10:00 p.m.               261 urls.pyc
+14/10/2012  09:58 p.m.             1,162 wsgi.py
+14/10/2012  10:00 p.m.             1,017 wsgi.pyc
+14/10/2012  09:58 p.m.                 0 __init__.py
+14/10/2012  10:00 p.m.               123 __init__.pyc
+               8 archivos         11,447 bytes
+               2 dirs  177,075,228,672 bytes libres
+
+C:\PDjango\mysite\mysite>cd ..
+
+C:\PDjango\mysite>dir
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 4CE5-6CB5
+
+ Directorio de C:\PDjango\mysite
+
+14/10/2012  10:08 p.m.    <DIR>          .
+14/10/2012  10:08 p.m.    <DIR>          ..
+14/10/2012  09:58 p.m.               259 manage.py
+14/10/2012  10:11 p.m.    <DIR>          mysite
+14/10/2012  10:11 p.m.    <DIR>          polls
+14/10/2012  09:58 p.m.             5,126 settings.py
+14/10/2012  09:58 p.m.               582 urls.py
+14/10/2012  09:58 p.m.                 0 __init__.py
+               4 archivos          5,967 bytes
+               4 dirs  177,075,228,672 bytes libres
+
+C:\PDjango\mysite>python manage.py sql polls
+Error: No module named polls
+
+C:\PDjango\mysite>python manage.py sql polls
+Error: No module named polls
+
+C:\PDjango\mysite>python manage.py sql polls
+Error: No module named polls
+
+C:\PDjango\mysite>python manage.py sql polls
+BEGIN;
+CREATE TABLE `polls_poll` (
+    `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    `question` varchar(200) NOT NULL,
+    `pub_date` datetime NOT NULL
+)
+;
+CREATE TABLE `polls_choice` (
+    `id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    `poll_id` integer NOT NULL,
+    `choice` varchar(200) NOT NULL,
+    `votes` integer NOT NULL
+)
+;
+ALTER TABLE `polls_choice` ADD CONSTRAINT `poll_id_refs_id_5d896c23` FOREIGN KEY
+ (`poll_id`) REFERENCES `polls_poll` (`id`);
+COMMIT;
+
+C:\PDjango\mysite>

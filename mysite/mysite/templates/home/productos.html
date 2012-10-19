@@ -1,0 +1,14 @@
+<html>
+<head><title>Lista de Productos</title></head>
+<body><h1>Catalogo de Productos</h1>
+{% if productos%} 
+            <h2>Estos son los productos</h2>
+       {%for p in productos%}
+          <p>{{p.nombre}}</p>
+       {% endfor %}
+{% else %}
+            <h2>No existen productos activos a la venta</h2>
+      
+{% endif %}
+</body>
+<html>

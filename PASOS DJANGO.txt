@@ -1,0 +1,29 @@
+python manage.py syncdb
+	
+
+
+django-admin.py startapp home   ---- creae una aplicaciones
+
+
+
+VIDEOTUTORIAL 5
+ASI SE OBTIENE INFORMACION QUE NOS MANDA DJANGO
+
+Poniendo dos llaves al inicio y dos al final
+
+<h3>{{msg}}</h3>
+
+
+AQUI VAMOS GENERANDO LAS VISTAS
+
+C:\PDjango\mysite\mysite\apps\home\views.py
+
+DESPUES DE CREAR LA VISTA, VAMOS AL ARCHIVO urls.py dentro de la misma carpeta
+
+C:\PDjango\mysite\mysite\apps\home\urls.py
+
+
+
+
+
+
